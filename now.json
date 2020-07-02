@@ -1,9 +1,6 @@
 {
   "name": "microlink-analytics.now.sh",
   "version": 2,
-  "alias": [
-    "analytics.microlink.io"
-  ],
   "builds": [
     {
       "src": "src/index.js",
