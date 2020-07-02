@@ -2,7 +2,7 @@
   <img src="https://cdn.microlink.io/logo/banner.png" alt="microlink oss">
 </div>
 
-[![Deploy with Vercel](https://zeit.co/button)](https://vercel.com/new/project?template=https://github.com/microlinkhq/oss)
+[![Deploy with Vercel](https://zeit.co/button)](https://vercel.com/new/project?template=https://github.com/microlinkhq/analytics)
 
 > Microservice to retrieve your CloudFlare Analytics.
 
