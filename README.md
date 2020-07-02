@@ -10,7 +10,7 @@ It converts your CloudFlare Analytics information
 
 ![](https://i.imgur.com/iH0vyim.png)
 
-to be retrieve in a programmatic way, so you can consume them as JSON payload for anywhere.
+In something easy to consume for any UI as JSON payload, from anywhere.
 
 See on live at [analytics.microlink.io](https://analytics.microlink.io/).
 
@@ -44,17 +44,10 @@ Default: 8000
 
 It specifies how much time after consider a request as timeout, in milliseconds.
 
-### HISTORY_MONTHS
-
-Type: `number`<br>
-Default: 3
-
-It specifies how much time since the current timestamp should be retrieved from data.
-
 ### MAX_CACHE
 
 Type: `number`<br>
-Default: 43200000 (12h)
+Default: 60000 (1m)
 
 It specifies how much time a response can be cached, in milliseconds.
 
