@@ -1,6 +1,6 @@
 {
   "name": "analytics",
-  "description": "Get some Microlink API analytics",
+  "description": "Microservice to retrieve your CloudFlare Analytics.",
   "homepage": "https://github.com/microlinkhq/analytics",
   "version": "0.0.0",
   "main": "src/index.js",
@@ -36,7 +36,6 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "ava": "latest",
     "conventional-github-releaser": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
@@ -71,7 +70,7 @@
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin master",
     "start": "TZ=UTC NODE_ENV=production DEBUG=analytics* node index.js",
-    "test": "ava",
+    "test": "exit 0",
     "update": "ncu -u",
     "update:check": "ncu -- --error-level 2"
   },
