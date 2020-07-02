@@ -1,0 +1,28 @@
+'use strict'
+
+const debug = require('debug-logfmt')('analytics')
+const pReflect = require('p-reflect')
+const pTimeout = require('p-timeout')
+const { send } = require('micri')
+
+const { MAX_CACHE = 43200, REQ_TIMEOUT = 8000 } = process.env
+const analytics = require('./analytics')
+
+let CACHE = {}
+
+module.exports = async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('content-type', 'application/json; charset=utf-8')
+  res.setHeader(
+    'cache-control',
+    `public, must-revalidate, max-age=${MAX_CACHE}, s-maxage=${MAX_CACHE}, stale-while-revalidate=60`
+  )
+  const { isFulfilled, value, reason } = await pReflect(
+    pTimeout(analytics(), REQ_TIMEOUT)
+  )
+
+  if (isFulfilled) CACHE = value
+  else debug.error(reason.message || reason)
+
+  return send(res, 200, CACHE)
+}

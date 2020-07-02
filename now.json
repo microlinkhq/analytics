@@ -1,0 +1,31 @@
+{
+  "name": "microlink-analytics.now.sh",
+  "version": 2,
+  "alias": [
+    "analytics.microlink.io"
+  ],
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "DEBUG": "analytics*"
+  },
+  "routes": [
+    {
+      "src": "/robots.txt",
+      "status": 204
+    },
+    {
+      "src": "/favicon.ico",
+      "status": 204
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/index.js"
+    }
+  ]
+}
