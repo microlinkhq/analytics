@@ -54,7 +54,7 @@ It specifies how much time since the current timestamp should be retrieved from 
 ### MAX_CACHE
 
 Type: `number`<br>
-Default: 43200 (12h)
+Default: 43200000 (12h)
 
 It specifies how much time a response can be cached, in milliseconds.
 

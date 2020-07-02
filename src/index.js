@@ -5,7 +5,7 @@ const pReflect = require('p-reflect')
 const pTimeout = require('p-timeout')
 const { send } = require('micri')
 
-const { MAX_CACHE = 43200, REQ_TIMEOUT = 8000 } = process.env
+const { MAX_CACHE = 43200000, REQ_TIMEOUT = 8000 } = process.env
 const analytics = require('./analytics')
 
 let CACHE = {}
