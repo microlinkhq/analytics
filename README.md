@@ -47,7 +47,7 @@ It specifies how much time after consider a request as timeout, in milliseconds.
 ### MAX_CACHE
 
 Type: `number`<br>
-Default: 60000 (1m)
+Default: 43200000 (12h)
 
 It specifies how much time a response can be cached, in milliseconds.
 
