@@ -53,8 +53,6 @@
     "node": ">= 10"
   },
   "files": [
-    "config",
-    "scripts",
     "src"
   ],
   "scripts": {
