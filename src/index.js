@@ -10,6 +10,8 @@ const analytics = require('./analytics')
 
 let CACHE = {}
 
+const isEmpty = (obj = {}) => Object.key(obj).length === 0
+
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('content-type', 'application/json; charset=utf-8')
@@ -21,7 +23,7 @@ module.exports = async (req, res) => {
     pTimeout(analytics(), REQ_TIMEOUT)
   )
 
-  if (isFulfilled) CACHE = value
+  if (isFulfilled && !isEmpty(value)) CACHE = value
   else debug.error(reason.message || reason)
 
   return send(res, 200, CACHE)
