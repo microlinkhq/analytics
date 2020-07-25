@@ -10,7 +10,7 @@ const analytics = require('./analytics')
 
 let CACHE = {}
 
-const isEmpty = (obj = {}) => Object.key(obj).length === 0
+const isEmpty = (obj = {}) => Object.keys(obj).length === 0
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
