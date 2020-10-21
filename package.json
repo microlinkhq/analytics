@@ -25,7 +25,7 @@
     "calc-percent": "~1.0.1",
     "date-fns": "~2.16.0",
     "debug-logfmt": "~1.0.4",
-    "got": "~11.7.0",
+    "got": "~11.8.0",
     "human-number": "~1.0.5",
     "micri": "~4.2.0",
     "p-reflect": "~2.1.0",
