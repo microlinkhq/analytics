@@ -6,9 +6,6 @@
       "use": "@now/node"
     }
   ],
-  "engines": {
-    "node": "10"
-  },
   "env": {
     "NODE_ENV": "production",
     "DEBUG": "analytics*"
