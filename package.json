@@ -30,7 +30,7 @@
     "micri": "~4.2.0",
     "p-reflect": "~2.1.0",
     "p-timeout": "~4.0.0",
-    "pretty-bytes": "~5.4.1"
+    "pretty-bytes": "~5.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
