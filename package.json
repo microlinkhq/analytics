@@ -27,7 +27,7 @@
     "debug-logfmt": "~1.0.4",
     "got": "~11.8.0",
     "human-number": "~1.0.5",
-    "micri": "~4.2.0",
+    "micri": "~4.3.0",
     "p-reflect": "~2.1.0",
     "p-timeout": "~4.1.0",
     "pretty-bytes": "~5.5.0"
