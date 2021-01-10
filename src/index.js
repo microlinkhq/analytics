@@ -23,11 +23,10 @@ module.exports = async (req, res) => {
     pTimeout(analytics(), REQ_TIMEOUT)
   )
 
-  if (isFulfilled && !isEmpty(value)) {
-    CACHE = value
-    return send(res, 200, CACHE)
-  } else {
-    debug.error(reason.message || reason)
-    return send(res, 400)
-  }
+  if (isFulfilled && !isEmpty(value)) CACHE = value
+
+  if (!isEmpty(value)) return send(res, 200, CACHE)
+
+  debug.error(reason.message || reason)
+  return send(res, 400)
 }
