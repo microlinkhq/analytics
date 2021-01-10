@@ -8,7 +8,7 @@ const { send } = require('micri')
 const { MAX_CACHE = 43200000, REQ_TIMEOUT = 8000 } = process.env
 const analytics = require('./analytics')
 
-let CACHE = {}
+let CACHE = null
 
 const isEmpty = (obj = {}) => Object.keys(obj).length === 0
 
@@ -23,8 +23,11 @@ module.exports = async (req, res) => {
     pTimeout(analytics(), REQ_TIMEOUT)
   )
 
-  if (isFulfilled && !isEmpty(value)) CACHE = value
-  else debug.error(reason.message || reason)
-
-  return send(res, 200, CACHE)
+  if (isFulfilled && !isEmpty(value)) {
+    CACHE = value
+    return send(res, 200, CACHE)
+  } else {
+    debug.error(reason.message || reason)
+    return send(res, 400)
+  }
 }
