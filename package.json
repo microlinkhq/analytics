@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "calc-percent": "~1.0.1",
-    "date-fns": "~2.16.1",
+    "date-fns": "~2.17.0",
     "debug-logfmt": "~1.0.4",
     "got": "~11.8.1",
     "human-number": "~1.0.6",
