@@ -17,8 +17,8 @@
     "url": "https://github.com/microlinkhq/analytics/issues"
   },
   "keywords": [
-    "microlink",
     "analytics",
+    "microlink",
     "requests"
   ],
   "dependencies": {
