@@ -1,5 +1,7 @@
 <div align="center">
   <img src="https://cdn.microlink.io/logo/banner.png" alt="microlink oss">
+  <br>
+  <br>
 </div>
 
 [![Deploy with Vercel](https://zeit.co/button)](https://vercel.com/new/project?template=https://github.com/microlinkhq/analytics)
@@ -47,9 +49,9 @@ It specifies how much time after consider a request as timeout, in milliseconds.
 ### MAX_CACHE
 
 Type: `number`<br>
-Default: 43200000 (12h)
+Default: 86400 (1d)
 
-It specifies how much time a response can be cached, in milliseconds.
+It specifies how much time a response can be cached, in seconds.
 
 ## License
 

@@ -25,9 +25,8 @@
     "calc-percent": "~1.0.1",
     "date-fns": "~2.29.1",
     "debug-logfmt": "~1.0.4",
-    "got": "~11.8.2",
+    "got": "~11.8.5",
     "human-number": "~2.0.0",
-    "micri": "~4.5.0",
     "p-reflect": "~2.1.0",
     "p-timeout": "~4.1.0",
     "pretty-bytes": "~5.6.0"
@@ -39,8 +38,8 @@
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
-    "husky": "latest",
-    "lint-staged": "latest",
+    "simple-git-hooks": "latest",
+    "nano-staged": "latest",
     "npm-check-updates": "latest",
     "prettier-standard": "latest",
     "standard": "latest",
@@ -78,13 +77,11 @@
       "@commitlint/config-conventional"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
+  "simple-git-hooks": {
+  "commit-msg": "npx commitlint --edit",
+  "pre-commit": "npx nano-staged"
+},
+  "nano-staged": {
     "package.json": [
       "finepack",
       "git add"

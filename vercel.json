@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "src/index.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node@canary"
     }
   ],
   "env": {
@@ -21,7 +21,10 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/src/index.js"
+      "dest": "/src/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }
