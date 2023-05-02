@@ -2,14 +2,12 @@
 
 const debug = require('debug-logfmt')('analytics')
 
-const server = require('http')
-  .createServer()
-  .on('request', require('.'))
+const server = require('http').createServer(require('.'))
 
 const port = process.env.PORT || process.env.port || 3000
 
-server.on('error', err => {
-  debug({ status: 'error', message: err.message, trace: err.stack })
+server.on('error', error => {
+  debug({ status: 'error', message: error.message, trace: error.stack })
   process.exit(1)
 })
 

@@ -25,7 +25,7 @@
     "calc-percent": "~1.0.1",
     "date-fns": "~2.30.0",
     "debug-logfmt": "~1.0.4",
-    "got": "~11.8.5",
+    "got": "~11.8.6",
     "human-number": "~2.0.0",
     "p-reflect": "~2.1.0",
     "p-timeout": "~4.1.0",
@@ -34,18 +34,12 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "conventional-github-releaser": "latest",
     "finepack": "latest",
-    "git-authors-cli": "latest",
-    "git-dirty": "latest",
-    "simple-git-hooks": "latest",
     "nano-staged": "latest",
-    "npm-check-updates": "latest",
     "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
     "standard": "latest",
-    "standard-markdown": "latest",
-    "standard-version": "latest",
-    "untracked": "latest"
+    "standard-markdown": "latest"
   },
   "engines": {
     "node": ">= 12"
@@ -56,19 +50,11 @@
   "scripts": {
     "build": "untracked > .nowignore",
     "clean": "rm -rf node_modules",
-    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "dev": "TZ=UTC NODE_ENV=development DEBUG=analytics* node src/server.js",
     "lint": "standard-markdown README.md && standard",
-    "postrelease": "npm run release:tags && npm run release:github && npm publish",
-    "prerelease": "git-dirty && npm run update:check && npm test && npm run contributors",
     "pretest": "npm run lint",
-    "release": "git-authors-cli finepack && git add package.json && standard-version -a",
-    "release:github": "conventional-github-releaser -p angular",
-    "release:tags": "git push --follow-tags origin master",
     "start": "TZ=UTC NODE_ENV=production DEBUG=analytics* node index.js",
-    "test": "exit 0",
-    "update": "ncu -u",
-    "update:check": "ncu -- --error-level 2"
+    "test": "exit 0"
   },
   "private": true,
   "license": "MIT",
@@ -77,22 +63,19 @@
       "@commitlint/config-conventional"
     ]
   },
-  "simple-git-hooks": {
-  "commit-msg": "npx commitlint --edit",
-  "pre-commit": "npx nano-staged"
-},
   "nano-staged": {
-    "package.json": [
-      "finepack",
-      "git add"
-    ],
-    "*.js": [
-      "prettier-standard",
-      "git add"
+    "*.js,!*.min.js,": [
+      "prettier-standard"
     ],
     "*.md": [
-      "standard-markdown",
-      "git add"
+      "standard-markdown"
+    ],
+    "package.json": [
+      "finepack"
     ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx nano-staged"
   }
 }
