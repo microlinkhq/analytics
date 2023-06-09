@@ -10,7 +10,7 @@ const analytics = require('./analytics')
 
 let CACHE = null
 
-const isEmpty = (obj = {}) => Object.keys(obj).length === 0
+const isEmpty = input => input == null || Object.keys(input).length === 0
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
     return res.end(data)
   }
 
-  debug.error(reason.message || reason)
+  debug.error(reason.stack || reason)
   res.statusCode = 400
   res.end()
 }
