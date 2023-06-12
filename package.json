@@ -22,7 +22,7 @@
     "requests"
   ],
   "dependencies": {
-    "ava": "3",
+    "ava": "4",
     "calc-percent": "~1.0.1",
     "date-fns": "~2.30.0",
     "debug-logfmt": "~1.0.4",
