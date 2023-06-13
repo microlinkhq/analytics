@@ -131,6 +131,7 @@ module.exports = async () => {
       ...addReqs(acc[quarterKey], byDay[key]),
       ...addBytes(acc[quarterKey], byDay[key])
     }
+
     return acc
   }, {})
 
@@ -140,3 +141,6 @@ module.exports = async () => {
     byDay
   }
 }
+
+module.exports.getMonthKey = getMonthKey
+module.exports.getQuarterKey = getQuarterKey

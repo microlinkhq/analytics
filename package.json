@@ -34,6 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "ava": "latest",
     "finepack": "latest",
     "nano-staged": "latest",
     "prettier-standard": "latest",
@@ -54,7 +55,7 @@
     "lint": "standard-markdown README.md && standard",
     "pretest": "npm run lint",
     "start": "TZ=UTC NODE_ENV=production DEBUG=analytics* node index.js",
-    "test": "exit 0"
+    "test": "ava"
   },
   "private": true,
   "license": "MIT",
