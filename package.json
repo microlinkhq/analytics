@@ -24,7 +24,7 @@
   "dependencies": {
     "calc-percent": "~1.0.1",
     "date-fns": "~2.30.0",
-    "debug-logfmt": "~1.0.4",
+    "debug-logfmt": "~1.2.0",
     "got": "~11.8.6",
     "human-number": "~2.0.0",
     "p-reflect": "~2.1.0",
