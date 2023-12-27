@@ -9,11 +9,11 @@
 
 > Microservice to retrieve your CloudFlare Analytics.
 
-It converts your CloudFlare Analytics information
+It converts your CloudFlare Analytics information:
 
 ![](https://i.imgur.com/iH0vyim.png)
 
-In something easy to consume for any UI as JSON payload, from anywhere.
+Into something easy to consume for any UI as JSON payload, from anywhere.
 
 See on live at [analytics.microlink.io](https://analytics.microlink.io/).
 
@@ -45,7 +45,7 @@ The authorization token associated with your CloudFlare account.
 Type: `number`<br>
 Default: 8000
 
-It specifies how much time after consider a request as timeout, in milliseconds.
+It specifies how much time after to consider a request as timeout, in milliseconds.
 
 ### MAX_CACHE
 

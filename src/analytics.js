@@ -2,15 +2,15 @@
 
 /* eslint camelcase: "off" */
 
-const differenceInDays = require('date-fns/differenceInDays')
-const getQuarter = require('date-fns/getQuarter')
-const subMonths = require('date-fns/subMonths')
-const parseISO = require('date-fns/parseISO')
+const { differenceInDays } = require('date-fns/differenceInDays')
+const { getQuarter } = require('date-fns/getQuarter')
+const { subMonths } = require('date-fns/subMonths')
+const { parseISO } = require('date-fns/parseISO')
+const { getYear } = require('date-fns/getYear')
+const { format } = require('date-fns/format')
 const calcPercent = require('calc-percent')
-const getYear = require('date-fns/getYear')
 const humanNumber = require('human-number')
 const prettyBytes = require('pretty-bytes')
-const format = require('date-fns/format')
 const got = require('got')
 
 const { ZONE_ID, X_AUTH_EMAIL, X_AUTH_KEY, HISTORY_MONTHS = 3 } = process.env
