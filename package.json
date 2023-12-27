@@ -23,10 +23,10 @@
   ],
   "dependencies": {
     "calc-percent": "~1.0.1",
-    "date-fns": "~3.0.0",
+    "date-fns": "~3.0.6",
     "debug-logfmt": "~1.2.0",
     "got": "~11.8.6",
-    "human-number": "~2.0.0",
+    "human-number": "~2.0.4",
     "p-reflect": "~2.1.0",
     "p-timeout": "~4.1.0",
     "pretty-bytes": "~5.6.0"
@@ -34,10 +34,10 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@ksmithut/prettier-standard": "latest",
     "ava": "latest",
     "finepack": "latest",
     "nano-staged": "latest",
-    "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest"
@@ -65,8 +65,9 @@
     ]
   },
   "nano-staged": {
-    "*.js,!*.min.js,": [
-      "prettier-standard"
+    "*.js": [
+      "prettier-standard",
+      "standard --fix"
     ],
     "*.md": [
       "standard-markdown"
