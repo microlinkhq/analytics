@@ -2,7 +2,17 @@
 
 const test = require('ava')
 
-const { getMonthKey, getQuarterKey } = require('../src/analytics')
+const { getMonthKey, getQuarterKey, parseZones } = require('../src/analytics')
+
+test('.parseZones', t => {
+  t.deepEqual(parseZones('microlink.io,abc123;unavatar.io,def456'), [
+    { name: 'microlink.io', id: 'abc123' },
+    { name: 'unavatar.io', id: 'def456' }
+  ])
+  t.deepEqual(parseZones('example.com,xyz'), [
+    { name: 'example.com', id: 'xyz' }
+  ])
+})
 
 test('.getMonthKey', t => {
   t.is(getMonthKey('2023-06-09'), '2023-06')
