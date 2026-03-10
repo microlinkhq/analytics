@@ -41,8 +41,8 @@ const addReqs = (item1, item2) => {
   })
 }
 
-const toReqs = ({ requests: uncached_reqs, cachedRequests: cached_reqs }) => {
-  const reqs = cached_reqs + uncached_reqs
+const toReqs = ({ requests: reqs, cachedRequests: cached_reqs }) => {
+  const uncached_reqs = reqs - cached_reqs
 
   return {
     reqs,
@@ -65,8 +65,8 @@ const addBytes = (item1, item2) => {
   })
 }
 
-const toBytes = ({ cachedBytes: cached_bytes, bytes: uncached_bytes }) => {
-  const bytes = cached_bytes + uncached_bytes
+const toBytes = ({ bytes, cachedBytes: cached_bytes }) => {
+  const uncached_bytes = bytes - cached_bytes
 
   return {
     bytes,
