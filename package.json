@@ -25,7 +25,7 @@
     "calc-percent": "~1.0.1",
     "date-fns": "~4.1.0",
     "debug-logfmt": "~1.4.0",
-    "got": "~11.8.6",
+    "got": "~15.0.0",
     "human-number": "~2.0.4",
     "null-prototype-object": "~1.2.5",
     "p-reflect": "~2.1.0",
