@@ -13,7 +13,7 @@ const humanNumber = require('human-number')
 const prettyBytes = require('pretty-bytes')
 const got = require('got')
 
-const { ZONE_ID, X_AUTH_EMAIL, X_AUTH_KEY, HISTORY_MONTHS = 3 } = process.env
+const { ZONE_ID, X_AUTH_EMAIL, X_AUTH_KEY, HISTORY_MONTHS = 12 } = process.env
 
 const CF_HEADERS = {
   'x-auth-email': X_AUTH_EMAIL,
